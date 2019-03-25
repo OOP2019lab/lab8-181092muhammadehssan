@@ -9,12 +9,12 @@ bool check(int ,int ,int);
 
 public:
 static string monthNames[13];
-	Date();
-	Date(int,int,int);
+	Date();//default constructor
+	Date(int,int,int);//parametrized constructor
 
-	friend ostream& operator<<( ostream &,const Date &);
-	bool operator==(const Date &);
-	friend istream & operator>>(istream &,Date &);
+	friend ostream& operator<<( ostream &,const Date &);//cout operator for class
+	bool operator==(const Date &);//retrun true for equal dates
+	friend istream & operator>>(istream &,Date &);//input for class operator
 	friend Date  operator +(Date &,int );
 	Date operator =(Date &);
 	Date operator --(int u);
